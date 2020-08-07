@@ -14,16 +14,14 @@ const App = () => {
 
     const [isHide, setIsHide] = useState(false)
     const [isSmall, setIsSmall] = useState(false)
-    const [isMode, setIsMode]=useState(false)
+    const [isMode, setIsMode] = useState(false)
 
     useEffect(() => {
         if (!isMode) {
             return
         }
         isSmall ? dispatch(getItems(32, 0)) : dispatch(getItems(1000, 3))
-
     }, [isMode])
-
 
     const onButtonClickSmall = () => {
         setIsMode(true)

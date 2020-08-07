@@ -26,22 +26,20 @@ const Main: React.FC<PropsType> = ({search, page, items, pageSize, currentPage})
     const [sortProperty, setSortProperty] = useState()
 
     const onSort = useMemo(() => {
-            const sort = (title: string) => {
-                setSortProperty(title)
-                if (sortOrder) {
-                    const newSortItems = page.sort((a: any, b: any) => a[title] > b[title] ? 1 : -1)
-                    setSortOrder(false)
-                    return setSortItems([...newSortItems])
-                } else {
-                    const newSortItems = page.sort((a: any, b: any) => a[title] > b[title] ? 1 : -1).reverse()
-                    setSortOrder(true)
-                    return setSortItems([...newSortItems])
-                }
+        const sort = (title: string) => {
+            setSortProperty(title)
+            if (sortOrder) {
+                const newSortItems = page.sort((a: any, b: any) => a[title] > b[title] ? 1 : -1)
+                setSortOrder(false)
+                return setSortItems([...newSortItems])
+            } else {
+                const newSortItems = page.sort((a: any, b: any) => a[title] > b[title] ? 1 : -1).reverse()
+                setSortOrder(true)
+                return setSortItems([...newSortItems])
             }
-            return sort
         }
-        , [sortOrder, page])
-
+        return sort
+    }, [sortOrder, page])
 
     const onPageChanged = useCallback((p: number) => dispatch(actions.setCurrentPage(p)), [dispatch])
 
