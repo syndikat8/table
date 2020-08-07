@@ -21,7 +21,7 @@ const App = () => {
             return
         }
         isSmall ? dispatch(getItems(32, 0)) : dispatch(getItems(1000, 3))
-    }, [isMode])
+    }, [isMode, dispatch, isSmall])
 
     const onButtonClickSmall = () => {
         setIsMode(true)
@@ -43,4 +43,4 @@ const App = () => {
     );
 }
 
-export default App;
+export default  React.memo(App);

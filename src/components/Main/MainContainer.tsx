@@ -27,4 +27,4 @@ const MainContainer = () => {
         currentPage={currentPage}/>
 }
 
-export default MainContainer;
+export default React.memo(MainContainer);

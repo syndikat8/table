@@ -10,7 +10,14 @@ const Search: React.FC<PropsType> = ({onSearch, search}) => {
 
     const [description, setDescription] = useState(search)
 
-    const onDescriptionChange = (e: ChangeEvent<HTMLInputElement>) => setDescription(e.target.value)
+    const onDescriptionChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setDescription(e.target.value)
+    }
+
+    const onButtonClick = () => {
+        onSearch(description)
+        setDescription("")
+    }
 
     return (
         <div className={styles.search}>
@@ -24,7 +31,7 @@ const Search: React.FC<PropsType> = ({onSearch, search}) => {
                 />
                 <div className="input-group-prepend">
                     <button
-                        onClick={()=> onSearch(description)}
+                        onClick={onButtonClick}
                         className="btn btn-outline-secondary">
                         Search
                     </button>
