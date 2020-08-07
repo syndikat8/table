@@ -19,7 +19,6 @@ export type DataType = {
     "description": string
 }
 
-
 export const tableApi = {
     getItems(rows: number, delay: number) {
         return instance.get(`?rows=${rows}&id={number|1000}&firstName={firstName}&delay=${delay}&lastName={lastName}&email={email}&phone={phone|(xxx)xxx-xx-xx}&address={addressObject}&description={lorem|32}`)

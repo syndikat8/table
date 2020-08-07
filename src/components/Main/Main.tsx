@@ -58,11 +58,9 @@ const Main: React.FC<PropsType> = ({search, page, items, pageSize, currentPage})
                onclickRow={onclickRow}
                onSort={onSort}/>
         <div className={styles.wrap}>
-
             <div className={styles.rowInformation}>
                 {rowInformation && <RowInformation rowInformation={rowInformation}/>}
             </div>
-
             <Paginator
                 items={items}
                 pageSize={pageSize}

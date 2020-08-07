@@ -38,7 +38,6 @@ const FormItem: React.FC<{} & InjectedFormProps<FormPropsType, {}>> = ({handleSu
 
 const TableReduxForm = reduxForm<FormPropsType, {}>({
     form: 'table',
-
 })(FormItem)
 
 export default TableReduxForm;
