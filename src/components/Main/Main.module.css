@@ -1,0 +1,12 @@
+.main{
+    width: 100%;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rowInformation {
+    width: 80%;
+}

@@ -1,0 +1,28 @@
+.paginator {
+    margin: 10px;
+    background-color: #343a40;
+    height: 50%;
+}
+
+.selectedPage {
+    font-weight: bold;
+    color: gold;
+}
+
+.paginatorItem {
+    padding: 5px;
+    font-size: 20px;
+}
+
+.paginatorItem:hover {
+    color: gold;
+}
+
+.paginatorArrow {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.paginatorArrow:hover {
+    color: gold;
+}
